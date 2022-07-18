@@ -6,6 +6,10 @@ Use the PunkApi (https://punkapi.com/documentation/v2) to fetch all of the beers
 
 Finally, create a filter that allows the user to filter the bar graph by date, and by the beer percentage (ABV).
 
+We aren't too fussed about styling for this exercise, but it would be ideal to get the structure of the page to be similar to the wireframe below:
+
+<img width="1195" alt="Screenshot 2022-07-18 at 15 54 12" src="https://user-images.githubusercontent.com/3050562/179539492-6d5d01b9-3cd7-4807-866f-0b5efb5222d7.png">
+
 ## Considerations
 
 - Consider how this may be expanded in the future, and which components may be re-usable as the application grows.
