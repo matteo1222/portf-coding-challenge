@@ -10,6 +10,7 @@ Finally, create a filter that allows the user to filter the bar graph by date, a
 
 - Consider how this may be expanded in the future, and which components may be re-usable as the application grows.
 - We prefer to utilise functional React with Hooks, over class-based React, however, this is not a dealbreaker.
+- You do not need to build a date-pickr yourself, there are many open source ones available!
 
 ## Assumptions
 
