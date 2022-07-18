@@ -2,7 +2,7 @@
 
 ## Task
 
-Use the PunkApi (https://punkapi.com/documentation/v2) to fetch all of the beers that they have in their API (~324 at time of writing). Then, using Nivo (https://nivo.rocks/) plot, using a bar graph, the number of beers first brewed for each month. 
+Use the PunkApi (https://punkapi.com/documentation/v2) to fetch all of the beers that they have in their API (~324 at time of writing). Then, using Nivo (https://nivo.rocks/) plot, using a bar graph, the sum of beers first brewed for each month. 
 
 Finally, create a filter that allows the user to filter the bar graph by date, and by the beer percentage (ABV).
 
