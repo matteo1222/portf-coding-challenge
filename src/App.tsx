@@ -1,6 +1,7 @@
 import "./App.css";
 import NumberFilter from "./components/NumberFilter";
 import MonthRangeFilter from "./components/MonthRangeFilter";
+import BarChart from "./components/BarChart";
 import { useState } from "react";
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
         <div className="Space"></div>
         <NumberFilter label="Filter By ABV" />
       </div>
+      <div className="Space"></div>
+      <article className="Chart">
+        <BarChart />
+      </article>
     </main>
   );
 }
