@@ -1,7 +1,12 @@
 import React from "react";
+import TextField from "@mui/material/TextField";
 
-function ABVFilter() {
-  return <div>ABVFilter</div>;
+interface NumberFilterProps {
+  label: string;
 }
 
-export default ABVFilter;
+function NumberFilter(props: NumberFilterProps) {
+  return <TextField label={props.label} variant="outlined" />;
+}
+
+export default NumberFilter;

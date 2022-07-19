@@ -34,6 +34,6 @@ html, body {
   align-items: center;
 }
 
-.FilterBar__Space {
-  padding: 2rem;
+.Space {
+  padding: 0.5rem;
 }

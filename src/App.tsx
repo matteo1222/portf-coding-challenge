@@ -1,6 +1,6 @@
 import "./App.css";
 import NumberFilter from "./components/NumberFilter";
-import DateRangeFilter from "./components/DateRangeFilter";
+import MonthRangeFilter from "./components/MonthRangeFilter";
 import { useState } from "react";
 
 function App() {
@@ -9,13 +9,14 @@ function App() {
   return (
     <main className="App">
       <div className="FilterBar">
-        <DateRangeFilter
+        <MonthRangeFilter
           startMonth={startMonth}
           setStartMonth={setStartMonth}
           endMonth={endMonth}
           setEndMonth={setEndMonth}
         />
-        <NumberFilter />
+        <div className="Space"></div>
+        <NumberFilter label="Filter By ABV" />
       </div>
     </main>
   );

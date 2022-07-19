@@ -1,6 +1,6 @@
 import React from "react";
 import NumberFilter from "./NumberFilter";
-import DateRangeFilter from "./DateRangeFilter";
+import DateRangeFilter from "./MonthRangeFilter";
 import "./FilterBar.css";
 
 function FilterBar() {
