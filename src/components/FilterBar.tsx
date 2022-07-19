@@ -4,12 +4,7 @@ import DateRangeFilter from "./DateRangeFilter";
 import "./FilterBar.css";
 
 function FilterBar() {
-  return (
-    <div className="FilterBar">
-      <DateRangeFilter />
-      <NumberFilter />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default FilterBar;
