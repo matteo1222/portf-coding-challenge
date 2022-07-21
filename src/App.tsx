@@ -12,9 +12,13 @@ function App() {
   const [startMonth, setStartMonth] = useState<Date | null>(null);
   const [endMonth, setEndMonth] = useState<Date | null>(null);
 
-  const query = useQuery(["beer"], fetchBeers, {
-    select: transformBeerData,
-  });
+  const query = useQuery(
+    ["beer", startMonth, endMonth],
+    () => fetchBeers(startMonth, endMonth),
+    {
+      select: transformBeerData,
+    }
+  );
   console.log("query", query);
   useEffect(() => {
     console.log("month ticks", getMonthTicksValues(query.data));
