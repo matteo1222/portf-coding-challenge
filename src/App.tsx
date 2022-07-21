@@ -2,16 +2,23 @@ import "./App.css";
 import NumberFilter from "./components/NumberFilter";
 import MonthRangeFilter from "./components/MonthRangeFilter";
 import BarChart from "./components/BarChart";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchBeers } from "./api/fetchBeers";
+import { transformBeerData } from "./utils/transformBeerData";
+import { getMonthTicksValues } from "./utils/getMonthTicksValues";
 
 function App() {
   const [startMonth, setStartMonth] = useState<Date | null>(null);
   const [endMonth, setEndMonth] = useState<Date | null>(null);
 
-  const query = useQuery(["beer"], fetchBeers);
-  console.log(query.data);
+  const query = useQuery(["beer"], fetchBeers, {
+    select: transformBeerData,
+  });
+  console.log("query", query);
+  useEffect(() => {
+    console.log("month ticks", getMonthTicksValues(query.data));
+  }, [query.data]);
   return (
     <main className="App">
       <div className="FilterBar">
@@ -26,7 +33,10 @@ function App() {
       </div>
       <div className="Space"></div>
       <article className="Chart">
-        <BarChart />
+        <BarChart
+          data={query.data}
+          tickValues={getMonthTicksValues(query.data)}
+        />
       </article>
     </main>
   );

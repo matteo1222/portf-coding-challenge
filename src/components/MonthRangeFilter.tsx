@@ -11,7 +11,7 @@ interface DateRangeFilterProps {
   endMonth: Date | null;
   setEndMonth: Dispatch<SetStateAction<Date | null>>;
 }
-
+// TODO: set max Date to today
 function DateRangeFilter(props: DateRangeFilterProps) {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>

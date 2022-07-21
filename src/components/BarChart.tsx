@@ -1,5 +1,11 @@
 import React from "react";
 import { ResponsiveBar } from "@nivo/bar";
+import { BeerData } from "../utils/transformBeerData";
+
+interface BarChartProps {
+  data?: BeerData;
+  tickValues: string[];
+}
 
 const data = [
   {
@@ -109,13 +115,16 @@ const data = [
   },
 ];
 
-function BarChart() {
+function BarChart(props: BarChartProps) {
+  if (!props.data) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <ResponsiveBar
-        data={data}
-        keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
-        indexBy="country"
+        data={props.data}
+        keys={["beer_sum"]}
+        indexBy="first_brewed"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
         padding={0.3}
         valueScale={{ type: "linear" }}
@@ -141,39 +150,22 @@ function BarChart() {
             spacing: 10,
           },
         ]}
-        fill={[
-          {
-            match: {
-              id: "fries",
-            },
-            id: "dots",
-          },
-          {
-            match: {
-              id: "sandwich",
-            },
-            id: "lines",
-          },
-        ]}
-        borderColor={{
-          from: "color",
-          modifiers: [["darker", 1.6]],
-        }}
         axisTop={null}
         axisRight={null}
         axisBottom={{
+          tickValues: props.tickValues,
           tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: "country",
+          tickPadding: 3,
+          tickRotation: -45,
+          legend: "First Brewed Month",
           legendPosition: "middle",
-          legendOffset: 32,
+          legendOffset: 45,
         }}
         axisLeft={{
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "food",
+          legend: "Beer Sum",
           legendPosition: "middle",
           legendOffset: -40,
         }}
@@ -183,32 +175,8 @@ function BarChart() {
           from: "color",
           modifiers: [["darker", 1.6]],
         }}
-        legends={[
-          {
-            dataFrom: "keys",
-            anchor: "bottom-right",
-            direction: "column",
-            justify: false,
-            translateX: 120,
-            translateY: 0,
-            itemsSpacing: 2,
-            itemWidth: 100,
-            itemHeight: 20,
-            itemDirection: "left-to-right",
-            itemOpacity: 0.85,
-            symbolSize: 20,
-            effects: [
-              {
-                on: "hover",
-                style: {
-                  itemOpacity: 1,
-                },
-              },
-            ],
-          },
-        ]}
         role="application"
-        ariaLabel="Nivo bar chart demo"
+        ariaLabel="Beer Num First Brewed"
         barAriaLabel={function (e) {
           return (
             e.id + ": " + e.formattedValue + " in country: " + e.indexValue
