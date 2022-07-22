@@ -114,7 +114,6 @@ const data = [
     donutColor: "hsl(300, 70%, 50%)",
   },
 ];
-
 function BarChart(props: BarChartProps) {
   if (!props.data) {
     return <div>Loading...</div>;
@@ -125,41 +124,22 @@ function BarChart(props: BarChartProps) {
         data={props.data}
         keys={["beer_sum"]}
         indexBy="first_brewed"
-        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+        margin={{ top: 50, right: 30, bottom: 60, left: 50 }}
+        theme={{ axis: { ticks: { text: { fontSize: 6 } } } }}
         padding={0.3}
         valueScale={{ type: "linear" }}
         indexScale={{ type: "band", round: true }}
         colors={{ scheme: "nivo" }}
-        defs={[
-          {
-            id: "dots",
-            type: "patternDots",
-            background: "inherit",
-            color: "#38bcb2",
-            size: 4,
-            padding: 1,
-            stagger: true,
-          },
-          {
-            id: "lines",
-            type: "patternLines",
-            background: "inherit",
-            color: "#eed312",
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10,
-          },
-        ]}
         axisTop={null}
         axisRight={null}
         axisBottom={{
           tickValues: props.tickValues,
           tickSize: 5,
           tickPadding: 3,
-          tickRotation: -45,
+          tickRotation: -90,
           legend: "First Brewed Month",
           legendPosition: "middle",
-          legendOffset: 45,
+          legendOffset: 55,
         }}
         axisLeft={{
           tickSize: 5,

@@ -21,6 +21,7 @@ function DateRangeFilter(props: DateRangeFilterProps) {
           views={["year", "month"]}
           label="Start Year and Month"
           value={props.startMonth}
+          maxDate={new Date()}
           onChange={(newValue) => {
             props.setStartMonth(newValue);
           }}
@@ -32,6 +33,7 @@ function DateRangeFilter(props: DateRangeFilterProps) {
           views={["year", "month"]}
           label="End Year and Month"
           value={props.endMonth}
+          maxDate={new Date()}
           onChange={(newValue) => {
             props.setEndMonth(newValue);
           }}

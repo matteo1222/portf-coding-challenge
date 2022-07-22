@@ -21,9 +21,7 @@ function App() {
     }
   );
   console.log("query", query);
-  useEffect(() => {
-    console.log("month ticks", getMonthTicksValues(query.data));
-  }, [query.data]);
+
   return (
     <main className="App">
       <div className="FilterBar">

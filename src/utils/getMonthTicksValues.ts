@@ -1,6 +1,8 @@
 import { parse, format, add } from 'date-fns'
 import { BeerData, IBeer } from './transformBeerData'
 
+// get a range of month string based on the earliest month and lastest month in beerData
+// e.g. ['Jan 10', 'Feb 10', 'Mar 10']
 export const getMonthTicksValues = (beerData?: BeerData) => {
   if (!beerData) return []
 
