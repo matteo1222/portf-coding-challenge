@@ -1,25 +1,36 @@
 # PortF Coding Challenge
 
-## Task
+This project was built using PunkApi (https://punkapi.com/documentation/v2) with React, MaterialUI, Nivo, and Typescript.
+Live Demo: https://main--gentle-horse-d75398.netlify.app/
 
-Use the PunkApi (https://punkapi.com/documentation/v2) to fetch all of the beers that they have in their API (~324 at time of writing). Then, using Nivo (https://nivo.rocks/) plot, using a bar graph, the sum of beers first brewed for each month. 
+## Features
 
-Finally, create a filter that allows the user to filter the bar graph by date, and by the beer percentage (ABV).
+- Bar Graph that shows the sum of beers that are first brewed for each month.
+- Enables users to filter the bar graph by date, and by the beer percentage (ABV).
+- Responsive x-axis tick text font size.
 
-We aren't too fussed about styling for this exercise, but it would be ideal to get the structure of the page to be similar to the wireframe below:
+## Future TODOs
 
-<img width="1195" alt="Screenshot 2022-07-18 at 15 54 12" src="https://user-images.githubusercontent.com/3050562/179539492-6d5d01b9-3cd7-4807-866f-0b5efb5222d7.png">
+- Write unit tests with React Testing Library
+- Write end-to-end test with Cypress
+- Improve UI responsiveness
 
-## Considerations
+## How to set up the project
 
-- Consider how this may be expanded in the future, and which components may be re-usable as the application grows.
-- We prefer to utilise functional React with Hooks, over class-based React, however, this is not a dealbreaker.
-- You do not need to build a date-picker yourself, there are many open source ones available!
+### `Install Dependencies`
 
-## Assumptions
+In the project directory, run:
 
-- If the beer does not contain a first brewed month and only a year is available, assume Janaury of that year.
+```
+npm install --legacy-peer-deps
+```
 
-## Submission
+This installs the required dependencies. The reason that we need `--legacy-peer-deps` is because current Nivo does not support React 18.
 
-Fork this and commit your work into any public repo (Github, Gitlab, Bitbucket etc.)
+### `Start Development Server`
+
+Run:
+
+```
+npm start
+```
