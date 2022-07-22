@@ -8,10 +8,20 @@ interface BarChartProps {
   tickValues: string[];
 }
 
+const MIN_TICK_FONT_SIZE = 4;
+const MAX_TICK_FONT_SIZE = 12;
+const RATIO = 200;
+
 function BarChart(props: BarChartProps) {
   if (!props.data) {
     return <CircularProgress size={60} />;
   }
+  // make tick font size responsive based on data length
+  let tickFontSize = Math.min(
+    MAX_TICK_FONT_SIZE,
+    (MIN_TICK_FONT_SIZE * RATIO) / props.data.length
+  );
+
   return (
     <>
       <Bar
@@ -21,7 +31,7 @@ function BarChart(props: BarChartProps) {
         width={1000}
         height={500}
         margin={{ top: 50, right: 30, bottom: 60, left: 50 }}
-        theme={{ axis: { ticks: { text: { fontSize: 6 } } } }}
+        theme={{ axis: { ticks: { text: { fontSize: tickFontSize } } } }}
         padding={0.3}
         valueScale={{ type: "linear" }}
         indexScale={{ type: "band", round: true }}
