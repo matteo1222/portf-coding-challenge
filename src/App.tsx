@@ -14,7 +14,7 @@ function App() {
   const [abvThreshold, setAbvThreshold] = useState<string>("");
 
   const query = useQuery(
-    ["beer", startMonth, endMonth],
+    ["beer", startMonth, endMonth, abvThreshold],
     () => fetchBeers(startMonth, endMonth, abvThreshold),
     {
       select: transformBeerData,
