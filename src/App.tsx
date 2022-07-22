@@ -2,7 +2,7 @@ import "./App.css";
 import NumberFilter from "./components/NumberFilter";
 import MonthRangeFilter from "./components/MonthRangeFilter";
 import BarChart from "./components/BarChart";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchBeers } from "./api/fetchBeers";
 import { transformBeerData } from "./utils/transformBeerData";
@@ -20,7 +20,6 @@ function App() {
       select: transformBeerData,
     }
   );
-  console.log("query", query);
 
   return (
     <main className="App">

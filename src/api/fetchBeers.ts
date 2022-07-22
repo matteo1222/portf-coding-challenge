@@ -1,4 +1,3 @@
-import { QueryKey } from "@tanstack/react-query"
 import { format } from "date-fns"
 
 const BASE_URL = 'https://api.punkapi.com/v2'
@@ -24,7 +23,6 @@ export const fetchBeers = async (startMonth: Date | null, endMonth: Date | null,
     }
     const currentPageRes = await fetch(`${BASE_URL}/beers?${searchParams.toString()}`)
     currentPageData = await currentPageRes.json()
-    console.log('currentPageData', currentPageData)
 
     data.push(...currentPageData)
     page++
