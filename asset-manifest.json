@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/matteo1222/portf-coding-challenge/static/css/main.d81626fe.css",
-    "main.js": "/matteo1222/portf-coding-challenge/static/js/main.0517abe4.js",
-    "static/js/787.49e4e660.chunk.js": "/matteo1222/portf-coding-challenge/static/js/787.49e4e660.chunk.js",
-    "index.html": "/matteo1222/portf-coding-challenge/index.html",
-    "main.d81626fe.css.map": "/matteo1222/portf-coding-challenge/static/css/main.d81626fe.css.map",
-    "main.0517abe4.js.map": "/matteo1222/portf-coding-challenge/static/js/main.0517abe4.js.map",
-    "787.49e4e660.chunk.js.map": "/matteo1222/portf-coding-challenge/static/js/787.49e4e660.chunk.js.map"
+    "main.css": "/portf-coding-challenge/static/css/main.d81626fe.css",
+    "main.js": "/portf-coding-challenge/static/js/main.f492b762.js",
+    "static/js/787.49e4e660.chunk.js": "/portf-coding-challenge/static/js/787.49e4e660.chunk.js",
+    "index.html": "/portf-coding-challenge/index.html",
+    "main.d81626fe.css.map": "/portf-coding-challenge/static/css/main.d81626fe.css.map",
+    "main.f492b762.js.map": "/portf-coding-challenge/static/js/main.f492b762.js.map",
+    "787.49e4e660.chunk.js.map": "/portf-coding-challenge/static/js/787.49e4e660.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d81626fe.css",
-    "static/js/main.0517abe4.js"
+    "static/js/main.f492b762.js"
   ]
 }
