@@ -2,9 +2,11 @@ import React from "react";
 import { Bar } from "@nivo/bar";
 import { BeerData } from "../utils/transformBeerData";
 import CircularProgress from "@mui/material/CircularProgress";
+import Typography from "@mui/material/Typography";
 
 interface BarChartProps {
   data?: BeerData;
+  isLoading: Boolean;
   tickValues: string[];
 }
 
@@ -13,8 +15,11 @@ const MAX_TICK_FONT_SIZE = 12;
 const RATIO = 200;
 
 function BarChart(props: BarChartProps) {
-  if (!props.data) {
+  if (props.isLoading || !props.data) {
     return <CircularProgress size={60} />;
+  }
+  if (props.data.length === 0) {
+    return <div>No data matches the provided filter.</div>;
   }
   // make tick font size responsive based on data length
   let tickFontSize = Math.min(

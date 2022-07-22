@@ -42,6 +42,7 @@ function App() {
       <article className="Chart">
         <BarChart
           data={query.data}
+          isLoading={query.isLoading}
           tickValues={getMonthTicksValues(query.data)}
         />
       </article>
