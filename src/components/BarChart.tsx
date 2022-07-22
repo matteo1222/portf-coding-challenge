@@ -64,9 +64,7 @@ function BarChart(props: BarChartProps) {
         role="application"
         ariaLabel="Beer Num First Brewed"
         barAriaLabel={function (e) {
-          return (
-            e.id + ": " + e.formattedValue + " in country: " + e.indexValue
-          );
+          return `There are total ${e.formattedValue} beers that are first brewed in ${e.indexValue}`;
         }}
       />
     </>
