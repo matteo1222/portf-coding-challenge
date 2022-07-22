@@ -2,7 +2,6 @@ import React from "react";
 import { Bar } from "@nivo/bar";
 import { BeerData } from "../utils/transformBeerData";
 import CircularProgress from "@mui/material/CircularProgress";
-import Typography from "@mui/material/Typography";
 
 interface BarChartProps {
   data?: BeerData;

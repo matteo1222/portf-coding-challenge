@@ -18,6 +18,9 @@ function App() {
     () => fetchBeers(startMonth, endMonth, abvThreshold),
     {
       select: transformBeerData,
+      staleTime: Infinity,
+      // 1 day
+      cacheTime: 24 * 60 * 60 * 1000,
     }
   );
 
