@@ -1,7 +1,7 @@
 # PortF Coding Challenge
 
 This project was built using PunkApi (https://punkapi.com/documentation/v2) with React, MaterialUI, Nivo, and Typescript.
-Live Demo: https://main--gentle-horse-d75398.netlify.app/
+Live Demo: https://matteo1222.github.io/portf-coding-challenge/
 
 ## Features
 
