@@ -50,3 +50,7 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+.Chart > div {
+  width: 100%;
+}
